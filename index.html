@@ -28219,7 +28219,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <ul>
 <li><p>Además de la tasa AROPE, también podemos hallar el <strong>porcentaje de personas que sufren alguna de las trece privaciones</strong> que se consideran en la <strong>carencia material y social severa</strong>.</p></li>
 <li><p>Imaginemos, por ejemplo, que queremos saber qué porcentaje de la población <strong>no puede permitirse ir de vacaciones</strong> fuera de casa al menos una semana al año.</p></li>
-<li><p>Para ello, tenemos que usar la variable <code>HS040</code>, que toma el valor <code>&quot;2&quot;</code> si la persona sufre esta privación y <code>&quot;1&quot;</code> si no la sufre. Como algunas personas no proporcionan información sobre esta cuestión, antes de realizar el cálculo debemos excluirlas de la muestra mediante <code>filter(!is.na(HS040))</code>.</p></li>
+<li><p>Para ello, tenemos que usar la variable <code>HS040</code>, que toma el valor <code>&quot;2&quot;</code> si la persona sufre esta privación y <code>&quot;1&quot;</code> si no la sufre. Como la variable contiene valores ausentes (NA), debemos indicar <code>na.rm = TRUE</code> en el cálculo.</p></li>
 </ul>
 <div class="cell">
 <div>
@@ -28227,7 +28227,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 
 </div>
 <script type="webr-5-contents">
-eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0Ijp0cnVlfSwiY29kZSI6IkVDVnBlcnNvbmEgfD4gXG4gIGZpbHRlcighaXMubmEoSFMwNDApKSB8PiBcbiAgc3VtbWFyaXNlKHBlcnNvbmFzX2NhcmVuY2lhID0gc3VtKFJCMDUwW0hTMDQwID09IFwiMlwiXSkpIn0=
+eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0Ijp0cnVlfSwiY29kZSI6IkVDVnBlcnNvbmEgfD4gXG4gIHN1bW1hcmlzZShwZXJzb25hc19jYXJlbmNpYSA9IHN1bShSQjA1MFtIUzA0MCA9PSBcIjJcIl0sIG5hLnJtID0gVFJVRSkpIn0=
 </script>
 </div>
 </div>
