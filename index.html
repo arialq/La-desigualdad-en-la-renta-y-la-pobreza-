@@ -28134,7 +28134,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <section id="distribución-de-renta-equivalente" class="slide level2 scrollable">
 <h2>Distribución de renta equivalente</h2>
 <ul>
-<li>Con una pequeña modificación en el código con el que hallamos la mediana poblacional, podemos obtener la distribución de la renta equivalente <span class="hl-red"><strong>por percentiles</strong></span>.</li>
+<li>Con unas pequeñas modificaciones en el código con el que hallamos la mediana poblacional, podemos obtener la distribución de la renta equivalente <span class="hl-red"><strong>por percentiles</strong></span>.</li>
 </ul>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href aria-label="1"></a>max_renta <span class="ot">&lt;-</span> ECVpersona <span class="sc">|&gt;</span></span>
@@ -28633,7 +28633,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <section id="distribución-de-renta-equivalente-por-grupo-1" class="slide level2 scrollable">
 <h2>Distribución de renta equivalente por grupo</h2>
 <ul>
-<li>Consultamos los resultados.</li>
+<li>Consultamos los resultados con <code>View()</code>, para explorar en cada grupo el límite superior de cada percentil.</li>
 </ul>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href aria-label="1"></a><span class="fu">View</span>(max_renta_grupos)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -29662,7 +29662,7 @@ Ver los resultados
 <section id="distribución-de-renta-equivalente-por-grupo-2" class="slide level2 scrollable">
 <h2>Distribución de renta equivalente por grupo</h2>
 <ul>
-<li>Representamos con un gráfico de líneas las distribuciones.</li>
+<li>Representamos con un gráfico de líneas la distribución de los arrendatarios y la de los no arrendatarios.</li>
 </ul>
 <div class="cell">
 <div>
@@ -29809,8 +29809,8 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <h2>Indicadores de pobreza y exclusión social</h2>
 <ul>
 <li><p>Además de la tasa AROPE, también podemos hallar el <span class="hl-red"><strong>porcentaje de personas que sufren alguna de las trece privaciones</strong></span> que se consideran en la <strong>carencia material y social severa</strong>.</p></li>
-<li><p>Imaginemos, por ejemplo, que queremos saber qué porcentaje de la población <span class="hl-red"><strong>no puede permitirse ir de vacaciones</strong></span> fuera de casa al menos una semana al año.</p></li>
-<li><p>Para ello, tenemos que usar la variable <code>HS040</code>, que toma el valor <code>&quot;2&quot;</code> si la persona sufre esta privación y <code>&quot;1&quot;</code> si no la sufre. Como la variable contiene valores ausentes (NA), debemos indicar <code>na.rm = TRUE</code> en el cálculo.</p></li>
+<li><p>Imaginemos, por ejemplo, que queremos saber qué porcentaje de la población <span class="hl-red"><strong>no puede permitirse ir de vacaciones</strong></span> fuera de casa al menos una semana al año (variable <code>HS040</code>).</p></li>
+<li><p>Para ello, primero hallamos el número total de personas que sufren esta privación.</p></li>
 </ul>
 <div class="cell">
 <div>
@@ -29820,6 +29820,19 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <script type="webr-7-contents">
 eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0Ijp0cnVlfSwiY29kZSI6IkVDVnBlcnNvbmEgfD4gXG4gIHN1bW1hcmlzZShwZXJzb25hc19jYXJlbmNpYSA9IHN1bShSQjA1MFtIUzA0MCA9PSBcIjJcIl0sIG5hLnJtID0gVFJVRSkpIn0=
 </script>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><code>HS040</code> toma el valor <code>&quot;2&quot;</code> si la persona sufre esta privación y <code>&quot;1&quot;</code> si no la sufre. Como la variable contiene valores ausentes (NA), debemos indicar <code>na.rm=TRUE</code> en el cálculo.</p>
+</div>
 </div>
 </div>
 </section>
