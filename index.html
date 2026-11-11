@@ -28109,7 +28109,8 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <li><strong>Mediana muestral</strong> (sin ponderar):</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href aria-label="1"></a>ECVpersona <span class="sc">|&gt;</span> <span class="fu">summarise</span>(<span class="at">P50_muestral =</span> <span class="fu">median</span>(RENTA_EQUIVALENTE))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href aria-label="1"></a>ECVpersona <span class="sc">|&gt;</span> </span>
+<span id="cb15-2"><a href aria-label="2"></a>  <span class="fu">summarise</span>(<span class="at">P50_muestral =</span> <span class="fu">median</span>(RENTA_EQUIVALENTE))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  P50_muestral
 1     21608.33</code></pre>
