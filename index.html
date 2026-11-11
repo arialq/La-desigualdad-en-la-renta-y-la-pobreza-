@@ -27951,7 +27951,7 @@ Introducción a la economía aplicada • Adrián Rial Quiroga
 <section id="carga-del-fichero" class="slide level2">
 <h2>Carga del fichero</h2>
 <ul>
-<li><p>Vamos a comenzar a trabajar con los datos transversales de la <strong>ECV del año 2025</strong> (la última publicada) y el nivel de análisis correspondiente a la persona.</p></li>
+<li><p>Vamos a comenzar a trabajar con los datos transversales de la <span class="hl-red"><strong>ECV del año 2025</strong></span> (la última publicada) y el nivel de análisis correspondiente a la persona.</p></li>
 <li><p>Para ello, cargamos el fichero de datos (<code>ECVpersona.RData</code>) y los paquetes <code>{dplyr}</code> y <code>{ggplot2}</code>.</p></li>
 </ul>
 <div class="cell">
@@ -28026,7 +28026,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImNvbXBsZXRpb24iOmZhbHNlLCJlY2hvIjpmYWxzZSwiZWRp
 </div>
 </div>
 <ul>
-<li>La ECV es representativa del conjunto de la población residente en España. Por tanto, al sumar los factores de elevación poblacionales, obtenemos el <strong>total de personas que residen en España</strong>.</li>
+<li>La ECV es representativa del conjunto de la población residente en España. Por tanto, al sumar los factores de elevación poblacionales, obtenemos el <span class="hl-red"><strong>total de personas que residen en España</strong></span>.</li>
 </ul>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href aria-label="1"></a>ECVpersona <span class="sc">|&gt;</span></span>
@@ -28037,7 +28037,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImNvbXBsZXRpb24iOmZhbHNlLCJlY2hvIjpmYWxzZSwiZWRp
 </div>
 </div>
 <ul>
-<li><p>Además, podemos utilizar estos factores de elevación para obtener la <strong>distribución porcentual de diferentes grupos de población</strong>.</p></li>
+<li><p>Además, podemos utilizar estos factores de elevación para obtener la <span class="hl-red"><strong>distribución porcentual de diferentes grupos de población</strong></span>.</p></li>
 <li><p>Imaginemos, por ejemplo, que queremos conocer qué porcentaje de la población pertenece a la clase baja.</p></li>
 </ul>
 <div class="cell">
@@ -28054,7 +28054,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <section id="renta-equivalente-media" class="slide level2 scrollable">
 <h2>Renta equivalente media</h2>
 <ul>
-<li>De manera análoga a lo que hacíamos en la EPF con el cálculo del gasto medio, para obtener la <strong>renta equivalente media por persona</strong>, tenemos que hallar la media ponderada de <code>RENTA_EQUIVALENTE</code>, utilizando como ponderación el factor de elevación poblacional.</li>
+<li>De manera análoga a lo que hacíamos en la EPF con el cálculo del gasto medio, para obtener la <span class="hl-red"><strong>renta equivalente media por persona</strong></span>, tenemos que hallar la media ponderada de <code>RENTA_EQUIVALENTE</code>, utilizando como ponderación el factor de elevación poblacional.</li>
 </ul>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href aria-label="1"></a>ECVpersona <span class="sc">|&gt;</span> </span>
@@ -28065,7 +28065,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 </div>
 </div>
 <ul>
-<li>También podemos <strong>comparar el nivel de vida medio de diferentes grupos</strong> de población calculando la renta equivalente media de cada grupo.</li>
+<li>También podemos <span class="hl-red"><strong>comparar el nivel de vida medio de diferentes grupos</strong></span> de población calculando la renta equivalente media de cada grupo.</li>
 </ul>
 <div class="cell">
 <div>
@@ -28200,7 +28200,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <section id="indicadores-de-pobreza-y-exclusión-social-1" class="slide level2 scrollable">
 <h2>Indicadores de pobreza y exclusión social</h2>
 <ul>
-<li><p>Para calcular la <strong>tasa AROPE</strong> a partir de los microdatos de la ECV, utilizaremos la variable <code>vrEU2030_nuevo</code>, que toma el valor <code>&quot;1&quot;</code> si la persona está en riesgo de pobreza o exclusión social y <code>&quot;0&quot;</code> si no lo está.</p></li>
+<li><p>Para calcular la <span class="hl-red"><strong>tasa AROPE</strong></span> a partir de los microdatos de la ECV, utilizaremos la variable <code>vrEU2030_nuevo</code>, que toma el valor <code>&quot;1&quot;</code> si la persona está en riesgo de pobreza o exclusión social y <code>&quot;0&quot;</code> si no lo está.</p></li>
 <li><p>Para este cálculo, primero hemos de obtener el numerador de la tasa (la población en riesgo de pobreza o exclusión social), sumando los factores de elevación para las observaciones en las que <code>vrEU2030_nuevo == &quot;1&quot;</code>.</p></li>
 </ul>
 <div class="cell">
@@ -28217,8 +28217,8 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <section id="indicadores-de-pobreza-y-exclusión-social-2" class="slide level2 scrollable" style="font-size: 0.95em">
 <h2>Indicadores de pobreza y exclusión social</h2>
 <ul>
-<li><p>Además de la tasa AROPE, también podemos hallar el <strong>porcentaje de personas que sufren alguna de las trece privaciones</strong> que se consideran en la <strong>carencia material y social severa</strong>.</p></li>
-<li><p>Imaginemos, por ejemplo, que queremos saber qué porcentaje de la población <strong>no puede permitirse ir de vacaciones</strong> fuera de casa al menos una semana al año.</p></li>
+<li><p>Además de la tasa AROPE, también podemos hallar el <span class="hl-red"><strong>porcentaje de personas que sufren alguna de las trece privaciones</strong></span> que se consideran en la <strong>carencia material y social severa</strong>.</p></li>
+<li><p>Imaginemos, por ejemplo, que queremos saber qué porcentaje de la población <span class="hl-red"><strong>no puede permitirse ir de vacaciones</strong></span> fuera de casa al menos una semana al año.</p></li>
 <li><p>Para ello, tenemos que usar la variable <code>HS040</code>, que toma el valor <code>&quot;2&quot;</code> si la persona sufre esta privación y <code>&quot;1&quot;</code> si no la sufre. Como la variable contiene valores ausentes (NA), debemos indicar <code>na.rm = TRUE</code> en el cálculo.</p></li>
 </ul>
 <div class="cell">
@@ -28234,7 +28234,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 </section>
 <section id="árbol-de-decisión" class="slide level2">
 <h2>Árbol de decisión</h2>
-<p>Para analizar qué <strong>características sociodemográficas</strong> están más relacionadas con el <strong>riesgo de pobreza o exclusión social</strong>, podemos estimar un árbol de decisión. Para ello, seguimos estos tres pasos:</p>
+<p>Para analizar qué <span class="hl-red"><strong>características sociodemográficas</strong></span> están más relacionadas con el <span class="hl-red"><strong>riesgo de pobreza o exclusión social</strong></span>, podemos estimar un árbol de decisión. Para ello, seguimos estos tres pasos:</p>
 <ol type="1">
 <li>Instalamos y cargamos los paquetes <code>{rpart}</code> y <code>{rpart.plot}</code>.</li>
 </ol>
