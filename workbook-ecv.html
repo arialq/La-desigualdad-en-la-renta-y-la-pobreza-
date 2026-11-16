@@ -2394,7 +2394,7 @@ min-height: 500px;
 // Document level settings ----
 
 // Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = ['ggplot2', 'dplyr', 'Hmisc'];
+globalThis.qwebrInstallRPackagesList = ['ggplot2', 'dplyr', 'Hmisc', 'plotly'];
 
 // Specify possible locations to search for the repository
 globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -2416,7 +2416,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"load(\"ECVpersona.RData\")\n\nlibrary(dplyr)\nlibrary(ggplot2)\n\nECVpersona \u003c- ECVpersona |> \n  mutate(RENTA_EQUIVALENTE = HY020 / HX240) ","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"edit":"true","editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","persist":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Escribid el código para resolver el ejercicio","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"edit":"true","editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","persist":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Escribid el código para resolver el ejercicio","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"edit":"true","editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","persist":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Escribid el código para resolver el ejercicio","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"edit":"true","editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","persist":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qwebrCellDetails = [{"code":"# Cargamos la base de datos\nload(\"ECVpersona.RData\")\n\n# Cargamos los paquetes necesarios\nlibrary(dplyr)\nlibrary(ggplot2)\n\n# Calculamos la renta equivalente\nECVpersona \u003c- ECVpersona |> \n  mutate(RENTA_EQUIVALENTE = HY020 / HX240)","id":1,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"edit":"true","editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-1","message":"true","out-height":"","out-width":"700px","output":"true","persist":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Escribid el código para resolver el ejercicio","id":2,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"edit":"true","editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-2","message":"true","out-height":"","out-width":"700px","output":"true","persist":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Escribid el código para resolver el ejercicio","id":3,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"edit":"true","editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-3","message":"true","out-height":"","out-width":"700px","output":"true","persist":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"max_renta \u003c- ECVpersona |>\n  reframe(PERCENTIL = seq(0.01, 1, 0.01),\n    LIMITE_SUP = wtd.quantile(RENTA_EQUIVALENTE, weights = RB050, probs = PERCENTIL))\n\np \u003c- ggplot(max_renta |> filter(PERCENTIL \u003c 100),\n            aes(x = PERCENTIL, y = LIMITE_SUP)) +\n  geom_line()\n\nggplotly(p, tooltip = c(\"x\", \"y\"))","id":4,"options":{"autorun":"false","classes":"","comment":"","context":"interactive","dpi":72,"edit":"true","editor-font-scale":"1","editor-max-height":"","editor-quick-suggestions":"false","editor-word-wrap":"true","fig-cap":"","fig-height":5,"fig-width":7,"label":"unnamed-chunk-4","message":"true","out-height":"","out-width":"700px","output":"true","persist":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 </script>
 <script type="module">
@@ -4013,11 +4013,11 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
+<p>A partir del fichero <code>ECVpersona.RData</code>, debéis resolver tres ejercicios.</p>
 <div class="cell" data-autorun="true">
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
-<p>A partir del fichero <code>ECVpersona.RData</code>, debéis resolver tres ejercicios.</p>
 <section id="ejercicio-1" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicio-1">💻 Ejercicio 1</h2>
 <p>¿Qué porcentaje de la población en España pertenece a la <strong>clase alta</strong>?</p>
