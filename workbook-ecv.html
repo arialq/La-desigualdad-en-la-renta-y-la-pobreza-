@@ -27789,11 +27789,14 @@ initializeRuntime();
     <h2 id="toc-title">Índice</h2>
    
   <ul>
-  <li><a href="#ejercicio-1" id="toc-ejercicio-1" class="nav-link active" data-scroll-target="#ejercicio-1">💻 Ejercicio 1</a></li>
+  <li><a href="#parte-i" id="toc-parte-i" class="nav-link active" data-scroll-target="#parte-i">Parte I</a>
+  <ul>
+  <li><a href="#ejercicio-1" id="toc-ejercicio-1" class="nav-link" data-scroll-target="#ejercicio-1">💻 Ejercicio 1</a></li>
   <li><a href="#ejercicio-2" id="toc-ejercicio-2" class="nav-link" data-scroll-target="#ejercicio-2">💻 Ejercicio 2</a></li>
   <li><a href="#ejercicio-3" id="toc-ejercicio-3" class="nav-link" data-scroll-target="#ejercicio-3">📈 Ejercicio 3</a>
   <ul>
   <li><a href="#preguntas" id="toc-preguntas" class="nav-link" data-scroll-target="#preguntas">🧠 Preguntas</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#parte-ii" id="toc-parte-ii" class="nav-link" data-scroll-target="#parte-ii">Parte II</a>
   <ul>
@@ -27845,7 +27848,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImNvbXBsZXRpb24iOmZhbHNlLCJlY2hvIjpmYWxzZSwiZWRp
 </script>
 </div>
 </div>
-<p>A partir del fichero <code>ECVpersona.RData</code>, debéis resolver tres ejercicios.</p>
+<p>A partir del fichero <code>ECVpersona.RData</code>, debéis resolver cinco ejercicios, divididos en dos partes.</p>
 <p>Comenzamos cargando el fichero y los paquetes necesarios y creamos la variable de renta equivalente.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargamos la base de datos</span></span>
@@ -27860,6 +27863,8 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImNvbXBsZXRpb24iOmZhbHNlLCJlY2hvIjpmYWxzZSwiZWRp
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ECVpersona <span class="ot">&lt;-</span> ECVpersona <span class="sc">|&gt;</span> </span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">RENTA_EQUIVALENTE =</span> HY020 <span class="sc">/</span> HX240)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<section id="parte-i" class="level1">
+<h1>Parte I</h1>
 <section id="ejercicio-1" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicio-1">💻 Ejercicio 1</h2>
 <p>¿Qué porcentaje de la población en España pertenece a la <strong>clase alta</strong>?</p>
@@ -28377,6 +28382,7 @@ Ver los resultados
 <li>¿En qué percentil de renta en la Comunidad de Madrid se encuentra una persona con una renta equivalente de 25.000 €?</li>
 </ol>
 <p>Se encuentra en el <strong>percentil 54</strong>, ya que con 25.000 € se excede el límite superior del percentil 53 (24.712,690 €), pero no el del percentil 54 (25.165,952 €).</p>
+</section>
 </section>
 </section>
 <section id="parte-ii" class="level1">
