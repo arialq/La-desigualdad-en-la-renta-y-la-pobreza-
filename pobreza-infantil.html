@@ -27850,7 +27850,7 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <section id="ejercicio-3-tasa-arope-infantil-por-composición-del-hogar" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicio-3-tasa-arope-infantil-por-composición-del-hogar">Ejercicio 3: tasa AROPE infantil por composición del hogar</h2>
 <p>Representad mediante un <strong>gráfico de barras</strong> la tasa AROPE infantil según la <strong>composición del hogar</strong> (variable <code>TIPHOGAR</code>).</p>
-<p><em>Nota: excluid del gráfico la categoría “8” de <code>TIPHOGAR</code>, correspondiente a hogares cuya composición no está identificada, dado que el número de observaciones de esta categoría es muy reducido.</em></p>
+<p><em>Nota: excluid del análisis las observaciones que presenten valores ausentes (NA) en la variable <code>TIPHOGAR</code>.</em></p>
 <div class="cell">
 <div>
 <div id="webr-4" class="exercise-cell">
@@ -27870,17 +27870,20 @@ eyJhdHRyIjp7ImNvbXBsZXRpb24iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJwZXJzaXN0
 <h2 class="anchored" data-anchor-id="ejercicio-4-tasa-arope-infantil-por-composición-del-hogar-y-régimen-de-tenencia">Ejercicio 4: tasa AROPE infantil por composición del hogar y régimen de tenencia</h2>
 <p>Obtened la tasa AROPE infantil según la composición del hogar y el régimen de tenencia de la vivienda. Para ello, distinguid tres tipos de hogares: las <strong>familias monoparentales</strong> (un adulto con al menos un niño), las <strong>familias numerosas</strong> (dos adultos con tres niños o más) y el <strong>resto de familias</strong>. En cuanto al régimen de tenencia, diferenciad entre <strong>arrendatarios</strong> y <strong>no arrendatarios</strong>.</p>
 <p>Representad los resultados con un <strong>gráfico de barras agrupadas</strong> que muestre dos barras para cada composición del hogar: una correspondiente a los arrendatarios y otra a los que no viven en alquiler.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Pista
+<span class="screen-reader-only">Nota</span>Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Recordad que la variable <code>ARRENDATARIO</code> nos permite identificar si la persona vive en alquiler o no.</p>
+<ol type="1">
+<li>Excluid del análisis las observaciones que presenten valores ausentes (NA) en la variable <code>TIPHOGAR</code>.</li>
+<li>Recordad que la variable <code>ARRENDATARIO</code> nos permite identificar si la persona vive en alquiler o no.</li>
+</ol>
 </div>
 </div>
 <div class="cell">
